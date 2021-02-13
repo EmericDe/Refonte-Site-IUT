@@ -1,0 +1,971 @@
+/* Début du css */
+
+
+/*Structuration de la page d'accueil */
+
+/* Le *, le #globale et le body permettent que les dimensions du site soient respectés et que rien ne déborde de l'écran de l'utilisateur */
+*{
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+#globale{
+    width : 100%;
+    margin : 0 auto;
+    overflow-x: hidden;
+}
+body, html {
+    height: 100% auto;
+    width: 100% auto;
+    max-width: 100% auto;
+    padding : 0 auto;
+    margin : 0 auto;
+    transition: all 1s;
+    box-sizing : border-box;
+    border: 0;
+    outline : 0;
+}
+
+/* Entête rouge où sont les réseaux sociaux de l'IUT */
+.nav{
+    line-height: 2.2em;
+    font-size : 12px;
+    padding-right: 15%;
+    background-color: #cf0a2c;
+}
+
+/* Manipulation de l'espacement et de la taille des élémentes présents dans l'entête rouge */
+.nav-item{
+    padding-left: 14px;
+}
+
+.nav-item i:hover{
+    opacity: 0.5;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.nav-link{
+    color : white;
+    padding: 0.2rem 0.3rem 0.2rem 0rem;
+    float : left;
+    font-family: "Open sans",Arial, sans-serif;
+    font-weight : 600;
+}
+
+.nav-link.etudiant:hover, .nav-link.personnels:hover {
+    text-decoration:none;
+    color: white;
+    opacity: 0.6;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Dimensions et manipulation de la barre de navigation */
+.navbar{
+    width: 100%;
+    line-height: 160%;
+    background-color: white;
+    font-size: 16px;
+    padding-left: 15%;
+    padding-bottom: 16px;
+    margin-right: 10%;
+}
+
+.navbar-brand {
+    line-height: 4.8em;
+}
+
+/* Rubrique Covid-19 quand on la survole et que l'opacité est réduite */
+li#covid-19 a{
+    background-color: #eaa903;
+    width: 100%;
+    height: 120%;
+}
+
+li#covid-19:hover{
+    opacity: 0.7;
+    transition : all 1s ease-in-out;
+}
+
+.nav-item{
+    padding-right: 2px;
+}
+
+
+/* Léger décalage entre les textes et les ciônes flèches dans la barre */
+.navbar i {
+    padding-left: 6px;
+}
+/* Logo de l'IUT présent dans la barre de navigation */
+.navbar #logo {
+    height : 57.4px;
+    padding-right : 80px;
+}
+
+
+.container-fluid{
+    width : 100% auto;
+    max-width : 100% auto;
+    height : 100%;
+    padding : 0% 0% 0% 0%;
+}
+
+/* Espacements et définition de la police entre les rubriques de la barre de navigation */
+nav ul {
+    list-style-type : none;
+}
+
+nav a {
+    color : black;
+    text-decoration : none;
+    text-align : left;
+}
+
+/* Définition de licône de recherche et aussi lorsqu'on survole cette icône*/
+#search a {
+    color: rgba(0, 0, 0, 0.6);
+    padding-top: 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#search a:hover {
+    color: #cf0a2c;
+    padding-top: 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/* Définition du menu déroulant */
+.dropdown-menu {
+    border-top-color: red;
+    border-top-width: 2px;
+}
+
+.navbar .dropdown-menu {
+    width: 220px;
+    letter-spacing: -1px;
+    font-size: 16px;
+    text-align : left;
+    padding-left: 15px;
+    padding-right : 20px;
+    display: inline-block;
+}
+
+/* Définition des élements présents dans le menu déroulant  */
+.dropdown-item {
+    display: block;
+    position: relative;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: 500;
+    padding-bottom: 12px;
+}
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    opacity: 0.7;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Responsive design de la barre de navigation */
+@media all and (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu{ display: none; }
+    .navbar .nav-item:hover .nav-link{ color: rgba(0, 0, 0, 0.6);  }
+    .navbar .nav-item:hover .dropdown-menu{ display: block; }
+    .navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+@media all and (max-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: rgba(0, 0, 0, 0.6);  }
+	.navbar .nav-item:hover .dropdown-menu{ display: none; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+/* Menu de navigation en format mobile  */
+.collapse:not(.show) {
+    display: inline;
+}
+
+#mobile{
+	display: none;
+}
+/* Aspect responsive desgign du menu de navigation */
+@media screen and (max-width:992px){
+
+    .navbar {
+        border-bottom:  1px solid rgba(0, 0, 0, 0.03)!important;
+    }
+    #search {
+            border-bottom: 0px solid rgba(0, 0, 0, 0.03)!important;
+            position: absolute;
+            top : 32px;
+            left: 80%;;
+            text-decoration: none;
+    }
+    .fa-bars{
+		padding-right: 90px;
+		color: #cf0a2c;
+    }
+	.nav-link{
+		display: none;
+	}
+	.col{
+		display: none;
+	}
+	#top-header{
+		display: none;
+	}
+	#menu{
+        display: none;
+   
+	}
+	#mobile {
+        display : block;
+	}
+	#mobile a{
+		font-size : 14px!important;
+		list-style: none;
+		text-align: left;
+		display: block;
+		padding: 10px 5%;
+		color: #666;
+	}
+	#mobile a:hover{
+		font-size : 14px!important;
+		list-style: none;
+		text-align: left;
+		display: block;
+		padding: 10px 5%;
+		color: #666;
+		background-color: rgba(0, 0, 0, 0.03);
+	}
+	#mobile-icone:hover{
+		font-size : 14px!important;
+		list-style: none;
+		text-align: left;
+		display: block;
+		padding: 10px 5%;
+		color: #666;
+		background-color: white!important;
+	}
+	
+	ul.sous-menu{
+		 padding-left: 5%;
+	}
+	
+	#mobile li.sous-titre {
+		display: block;
+		padding: 10px 5%;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+		color: #666;
+	}
+	
+	#mobile a:not([href]):not([tabindex]) {
+		list-style: none;
+		text-align: left;
+		display: block;
+		padding: 10px 5%;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+		background-color: rgba(0, 0, 0, 0.03);
+        font-weight: bold;	
+	}
+
+	.sous-titre{
+		background-color: white!important;
+	}
+	.sous-titre a:hover{
+		text-decoration: none;
+	}
+	
+	#mobile-menu{
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		line-height: 23px;
+		font-weight: 600;
+		display: none;
+		border-top: 3px #cf0a2c solid;
+		margin-top: 54px;
+		width: 80%;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		background-color: white;
+		position: absolute;
+		top: 50px;
+		left: 10%;
+		padding: 5%;
+		
+	}
+	
+	#mobile-menu .title{
+		height: 40px;
+		padding-top: 5px;
+        background-color: #e5e6e5;
+	}
+	#mobile-icone{
+		position: absolute;
+		top: 32px;
+		right: 10px;
+        color: #cf0a2c !important;
+		text-decoration: none;
+	}
+	#mobile:target #mobile-menu{
+		display: block;
+		padding : 37px 37px 37px 37px;
+	}		
+	
+	ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+	}
+	.container-fluid {
+	height: auto;
+    }
+}
+
+/* Le .header et le #logo ici pemettent de rendre l'arrière-plan
+en balnc mais aussi de faire apparaître le logo de l'IUT dans la barre.  */
+.header #deuxieme {
+    background-color : white;
+}
+
+
+#logo {
+    height :50px;
+    background-attachment: fixed;
+
+}
+
+
+
+
+@media (min-width: 981px){
+    .navbar .nav-item {
+        padding-top: 30px;
+    }
+    /* Dimensionnement et définition de la partie de la rentrée */
+    #rentree {
+        background-color: #EAA903;
+        width: 100%;
+        max-width: 100%;
+        display : inline-block;
+        background-repeat: no-repeat;
+        background-position : center center;
+        border: border-box;
+    }
+
+    /* Dans la partie Rentrée, ajout du logo transparent en arrière-plan */
+#rentree {
+    background-image: url("../logos/fd-opaque.png");
+    width: 100%;
+    max-width: 100%;
+    height : 100%;
+}
+    #rentree #bloc1 {
+        padding: 19.2875px 77.175px;
+    }
+
+    #rentree #bloc1 p {
+        font-size : 20px;
+        width: 100%;
+        max-width:100%;
+        color : #353740;
+        margin-left: 8%;
+        line-height : 1.8em;
+        margin-top: 5px;
+    }
+
+    #rentree h1 {
+        font-size: 60px;
+    }
+
+    #rentree article h1 {
+        color : white;
+        position :relative;
+        padding-top : 2%;
+        padding-right : 8%;
+        padding-bottom : 2%;
+        padding-left : 8%;
+        text-transform : uppercase;
+    }
+
+    #rentree #bloc2 img {
+        height : 100%;
+        width : 114%;
+        max-width : 114%;
+        margin-right: 0 !important;
+    }
+/* Définiton des boutons présents dans la partie de la Rentrée */
+    #rentree button {
+        position: relative;
+        margin-left: 8%;
+        padding: 0.3em 1em;
+        border: 2px solid;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.7em !important;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        color: #ffffff!important;
+        border-color: #ffffff;
+        border-radius: 100px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 700!important;
+        text-transform: uppercase!important;
+        margin-bottom : 2%;
+        transition : all 300 ms ease 0ms;
+    }
+/* Animantion des boutons en ajoutant le flèche droite quand on survole les boutons */
+    #rentree button i{
+        color: white;
+        display :none;
+    }
+    #rentree button:hover {
+        padding: 0.3em 1em;
+        padding-right: 14px;
+    }
+    #rentree button:hover i {
+        display: inline;
+        padding-left : 9px;
+    }
+/* Dimensionnement et définition de la partie sur les Candidatures */
+    #candidature {
+        background-color: white;
+        padding-top : 60px;
+        padding-bottom: 100px;
+        max-width : 100%;
+    }
+
+    #candidature h3 {
+        margin-bottom : 30px;
+        color: #747D88;
+        margin-left : 38%;
+        font-size: 36px;
+    }
+
+    #candidature p {
+        color : #555555;
+        font-size : 22px;
+        padding : 0px 0px 10px;
+        text-align : left;
+        width : 65%;
+        margin-left: 16.7%;
+    }
+/* Ajout des couleurs et décalage du bouton 'Plus d'informations' dans la partie Candidature */
+    #candidature button {
+        position: relative;
+        margin-left: 40%;
+        padding: 5.8px 16px;
+        border: 2px solid;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.7em !important;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        color: #EAA903!important;
+        border-color: #EAA903;
+        border-radius: 100px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 700!important;
+        text-transform: uppercase!important;
+        float : left;
+    }
+
+    #candidature button i {
+        display: none;
+    }
+
+    #candidature button:hover {
+        padding: 0.3em 1em;
+        padding-right: 14px;
+    }
+
+    #candidature button:hover i {
+        display : inline;
+        padding-left : 9px;
+    }
+/* Dimensionnement dans la partie Diplômes */
+    #diplomes {
+        background-color : #EAA903;
+        color : white;
+        padding: 60px 0px;
+    }
+
+    #diplomes h1 {
+        font-size : 36px;
+        color : white;
+        margin-left : 45%;
+        margin-bottom : 5%;
+    }
+/* Rend tous les articles cliquables pour nous renvoyer vers d'autres pages */
+    #diplomes a {
+        text-decoration: none;
+        color: white;
+    }
+/* Espacement entre les articles présents dans cette partie */
+    #diplomes article {
+        max-width: 100%;
+        position : relative;
+        left: 8%;
+        margin-left: 50px;
+        word-wrap: break-word;
+        text-decoration: none;
+        color: white;
+        padding-top: 30px!important;
+        padding-right: 1px!important;
+        padding-bottom: 30px!important;
+        padding-left: 38px!important;
+        line-height : 2em;
+    }
+
+    #diplomes h4 {
+        padding : 0px 0px 10px;
+        text-align : center;
+        font-size : 22px;
+    }
+
+    #diplomes p {
+        font-size : 16px;
+        font-family : 'Montserrat', sans-serif;
+        text-align : center;
+        width : 100%;
+        max-width : 100%;
+        line-height: 1.8em !important;
+        padding-left : 1px;
+        padding-right : 1px;
+    }
+
+    /* Permet de bien dimensionner le bouton dans l'Actualités */
+    #actualite button {
+        margin-top: 60px;
+        margin-left: 40%;
+        padding: 0.3em 1em;
+        border: 2px solid;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.7em !important;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        color: #EAA903!important;
+        border-color: #EAA903;
+        border-radius: 100px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 700!important;
+        text-transform: uppercase!important;
+        margin-bottom : 5%;
+    }
+    
+    #actualite button i {
+        display: none;
+    }
+    
+    #actualite button:hover {
+        padding: 0.3em 1em;
+        padding-right: 14px;
+    }
+    
+    #actualite button:hover i {
+        display : inline;
+        padding-left : 9px;
+    }
+    /* Dimensionnement de la partie sur les chiffres de l'IUT */
+    .iut-chiffres{
+        background-color: #eaa903;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        padding-top : 50px;
+        padding-bottom: 20px;
+    }
+
+}
+
+/* Permet de rendre les images svg blanches avec la partie Diplômes */
+.filter-white{
+    filter: invert(93%) sepia(100%) saturate(28%) hue-rotate(95deg) brightness(106%) contrast(107%);
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 19px;
+    margin-left: 35%;
+}
+
+
+
+
+/* Dimensionnement  sur la partie Actualités */
+#actualite{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#actualite h2{
+    text-decoration: none;
+    color : #747D88;
+    padding-bottom : 20px;
+    padding-top: 110px;
+    font-size : 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Les .card vont nous permettre de bien définir les dimensions des cartes présent dans le tableau
+ce qui représente les articles concernant l'actualité de l'IUT */
+.card {
+    width: 100%;
+}
+.card-title {
+	border-left: 4px solid #CF0A2C;
+    padding-left: 12px;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    padding-bottom: 0;
+    color : #555555;
+}
+/* Empêcher le 'lire plus' d'apparaître d'une mauvaise manière */
+.card-link {
+    color: #cf0a2c;
+    text-decoration: none;
+    font: 14px "Open sans", Arial, sans-serif;
+    padding-left: 3px;
+}
+
+.card-link:hover {
+    color: #cf0a2c;
+    text-decoration: none;
+    font: 14px "Open sans", Arial, sans-serif;
+    padding-left: 3px;
+}
+
+/* Sert à rendre le 'IUT' cliquable pour un renvoi vers une autre page */
+#iut {
+    color: #666;
+    text-decoration : none;
+    font: 14px "Open Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-bottom: 50%;
+    padding-left: 3px;
+}
+
+.card img {
+    height : auto;
+    min-width: 100%;
+    max-width : 100%;
+}
+
+.card p {
+    color: #666;
+    background-color: #fff;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7em;
+    padding-top : 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Les .iut-chiffres permettent de manipuler les chiffres qui apparasissent en fondu  */
+.iut-chiffres-titre.fade{
+    opacity: 1;
+}
+
+.iut-chiffres-titre {
+    font-size: 36px;
+    transition: opacity 1.75s ease-in-out;
+    margin-left: 35%;
+    margin-bottom: 7%;
+}
+
+.iut-chiffres-nombres{
+    font: 60px Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.iut-chiffres-text{
+    color: #353740;
+    font-size: 18px;
+    font-weight : bold;
+    line-height: 1.4em;
+    text-transform: uppercase !important;
+}
+
+/* Pour que l'affichage du fondu se fasse de manière progressive */
+.alt-f.fade{
+    opacity: 0;
+    transform: scale(.5);
+}
+
+/*  Cette zone correspond à notre pied de page  */
+.grid-container{
+    background-color:#cf0a2c;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align : left;
+    font-size : 14px;
+}
+
+/*  Les .un, .deux et .trois correspondent aux délimitations des zones d'affichage
+des éléments présents dans le pied de page */
+.un{
+    grid-column: 1/3;
+    grid-row:  1;
+    margin-left: 20%;
+    font: 14px "Open Sans", Arial, sans-serif;
+}
+
+.un h2{
+    font: 19px "Open Sans", Arial, sans-serif;
+}
+
+.deux{
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-left: 19%;
+}
+
+.trois{
+    grid-column: 3/3;
+    grid-row: 1;
+}
+
+.deux a{
+    font-size : 14px;
+    color : white;
+    list-style-type: none;
+    text-decoration : none;
+}
+
+.deux #Accès{
+    font-size : 19px;
+    font-weight: 400;
+}
+
+.trois img {
+    font-size: 50px;
+    margin-right: 3%;
+}
+
+/* Le responsive design en mode format mobile pour tout le site */
+@media (max-width: 980px){
+    #groupe{
+        display: none;
+    }
+	#grpnavbar {
+		display: none;
+	}
+
+    #rentree h1{
+        line-height: 1.7em;
+        color: #666;
+        font-size: 30px;
+		font-weight: 600;
+    }
+    #rentree p{
+        font-size: 14px;
+        color: #666;
+        margin-left: 0%;
+        margin-bottom: 0%;
+        margin-top: 0%;
+		width: 100%;
+    }
+    /* Manipulation de tous les boutons du site étant donné qu'ils sont tous pareils */
+    #rentree button, #candidature button, #actualite button{
+        color: #cf0a2c;
+        background-color: white;
+        border: 2px solid red;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+		margin-top: 6px;
+		margin-bottom: 6px;
+    }
+
+	#rentree button:hover, #candidature button:hover, #actualite button:hover {
+		border: none;
+		background-color: rgba(0, 0, 0, 0.03);
+		opacity: 1;
+	}
+
+	#rentree button i, #candidature button i, #actualite button i {
+		display: none;
+	}
+	#rentree button:hover i, #candidature button:hover i, #actualite button:hover i {
+		display: inline;
+		padding-left : 5px;
+	}
+
+    #rentree img{
+        display: none;
+        margin: 0%;
+    }
+    #rentree{
+        background-image:none;
+        background-color:white;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    /* Rendre toutes la partie des candidatures comme sur le site de l'IUT */
+    #candidature{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #candidature p{
+        font-size: 22px;
+        color: #666;
+    }
+
+	#candidature h3{
+		font : 14px "Open Sans", Arial, sans-serif;
+		margin-left: 35%;
+		color: #666666;
+		font-weight: 200;
+		margin-bottom: 30px;
+	}
+
+    #candidature button, #actualite button{
+        margin-left: 30%;
+        margin-top: 30px;
+    }
+    /*  Rendre la partie Diplômes de sorte qu'ils soient affichés 
+    deux à deux   */
+    #diplomes{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+	#diplomes h1 {
+		font : 14px "Open Sans", Arial, sans-serif;
+		margin-left: 43%;
+		color: #666666;
+		font-weight: 200;
+		margin-bottom: 30px;
+	}
+
+    #diplomes img{
+        color: #cf0a2c;
+    }
+	 #diplomes a {
+        text-decoration: none;
+    }
+
+    #diplomes h4{
+        font-size: 18px;
+        color: #666;
+        text-align: center;
+    }
+
+    #diplomes p{
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+    }
+/* Rendre les images svg en rouge pour le format mobile */
+	.filter-white {
+		filter: invert(10%) sepia(73%) saturate(5191%) hue-rotate(341deg) brightness(119%) contrast(103%);
+		width: 30%;
+	}
+
+    #actualite{
+        padding-bottom: 5%;
+    }
+	#actualite h2 {
+		font : 14px "Open Sans", Arial, sans-serif;
+		color: #666666;
+		font-weight: 200;
+		margin-bottom: 30px;
+    }
+    
+
+    #chiffres p{
+        color: #666;
+        font-size: 14px;
+    }
+    /* Rendre l'apparitionndes chiffres de la bonne manière attendue  */
+    .iut-chiffres-nombres{
+        color: #666;
+		font-weight: 200;
+   }
+
+    #chiffes{
+        padding-bottom: 15%;
+   }
+   /* Les .un, .deux et .trois font en sorte que chaque bloc du grid 
+   soit placé les uns en dessous des autres */
+	.un {
+		grid-row: 1/3;
+		grid-column: 1;
+	}
+	.deux {
+	grid-row: 2/3;
+	grid-column: 1;
+	padding-top: 100px;
+	}
+
+   .trois{
+	   grid-row: 3/3;
+	   grid-column: 1;
+	   display: inline;
+	   padding-top: 20px;
+	   padding-left: 60px;
+   }
+}
